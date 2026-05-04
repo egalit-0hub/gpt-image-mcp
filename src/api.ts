@@ -74,8 +74,10 @@ function buildRequestBody(opts: GenerateOptions): Record<string, unknown> {
       ]
     : opts.prompt;
 
+  // chatgpt.com/backend-api/codex requires top-level `instructions`, not a developer role in input
   return {
     model: opts.model ?? "gpt-5.4-mini",
+    instructions: "You are a helpful image generation assistant.",
     input: [{ role: "user", content: userContent }],
     tools: [
       {
