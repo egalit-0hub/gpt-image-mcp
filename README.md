@@ -26,7 +26,7 @@ claude mcp add gpt-image -- gpt-image-mcp
 ### Option B — run from source
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/gpt-image-mcp
+git clone https://github.com/egalit-0hub/gpt-image-mcp
 cd gpt-image-mcp
 npm install && npm run build
 claude mcp add gpt-image -- node /absolute/path/to/dist/index.js
